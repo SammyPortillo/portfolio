@@ -1,68 +1,255 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-	<title>Sam Portillo</title>
-	<style>
-		img {
-			/* transform: rotate(90deg); */
-		}
-	</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sam Portillo — software engineer building practical AI, voice automation, and market-data applications in Danville, California.">
+<title>Sam Portillo | Software Engineer</title>
+<style>
+:root {
+  --ink: #162a36;
+  --muted: #526571;
+  --accent: #086b65;
+  --line: #dce5e6;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #f6f8f7;
+  color: var(--ink);
+  font: 17px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 4px; }
+a:hover { color: #03433f; }
+a:focus-visible { outline: 3px solid #d18a24; outline-offset: 5px; }
+header, main, footer { max-width: 1080px; margin: auto; padding: 28px; }
+nav { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+nav a { font-weight: 650; }
+.hero { padding: 64px 0 48px; max-width: 850px; }
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: .14em;
+  color: var(--accent);
+  font-weight: 750;
+}
+h1 {
+  font-size: clamp(44px, 7vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+  margin: 16px 0 24px;
+}
+h2 { font-size: 30px; letter-spacing: -.025em; margin: 0 0 12px; }
+h3 { font-size: 22px; line-height: 1.3; margin: 10px 0; }
+p { margin: 12px 0; color: var(--muted); }
+.lead { font-size: 22px; max-width: 720px; }
+.actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 650;
+}
+.primary { background: var(--accent); color: white; }
+.primary:hover { background: #03433f; color: white; }
+.meta { font-size: 15px; margin-top: 24px; }
+section { padding: 26px 0 38px; border-top: 1px solid var(--line); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 26px;
+}
+.tag { font-size: 13px; font-weight: 700; color: var(--accent); }
+.skills { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+.skills span {
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border-radius: 30px;
+  background: white;
+  font-size: 14px;
+}
+ul { padding-left: 21px; }
+li { margin: 9px 0; }
+footer { border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+@media (max-width: 650px) {
+  .grid { grid-template-columns: 1fr; }
+  .hero { padding-top: 38px; }
+  header, main, footer { padding: 22px; }
+  .lead { font-size: 20px; }
+}
+</style>
 </head>
-
 <body>
+<header>
+  <nav aria-label="Main navigation">
+    <strong>Sam Portillo</strong>
+    <div>
+      <a href="#projects">Projects</a> ·
+      <a href="https://github.com/SammyPortillo">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/sammy-portillo-zyxe">LinkedIn</a>
+    </div>
+  </nav>
 
-	<table style="width:100%">
-		<tr>
-			<td style="width:20%">
+  <div class="hero">
+    <div class="eyebrow">Software engineer · Danville, California</div>
+    <h1>Practical software.<br>Intelligent systems.</h1>
+    <p class="lead">
+      I build applications that connect AI, real-time data, and everyday
+      tasks—from a local voice assistant to market-monitoring tools.
+    </p>
+    <div class="actions">
+      <a class="button primary" href="#projects">Explore my work</a>
+      <a class="button" href="https://www.linkedin.com/in/sammy-portillo-zyxe">
+        Connect on LinkedIn
+      </a>
+    </div>
+    <p class="meta">U.S. citizen · Open to software engineering opportunities</p>
+  </div>
+</header>
 
-				<center>
-					<img src="images/2020.JPG" alt="Sam Portillo" style="width:200px;height:400px;">
-					<p><br>
+<main>
+  <section id="projects">
+    <h2>Recent work</h2>
+    <p>Hands-on projects in local AI, automation, and streaming data.</p>
 
-						U.S. Citizen<br>
-						Available to work<br>
-						Site last updated: 01/27/2024<br>
-				</center>
-			</td>
-			<td>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">AI &amp; AUTOMATION</span>
+        <h3>Jarvis Home Hub</h3>
+        <p>
+          A local voice-assistant project connecting speech, language models,
+          and Home Assistant device control.
+        </p>
+        <ul>
+          <li>FastAPI endpoints for voice requests and service health.</li>
+          <li>AnythingLLM and Ollama integration.</li>
+          <li>Room-aware device commands and configurable motion-triggered audio.</li>
+        </ul>
+        <p class="tag">Python · FastAPI · Home Assistant · Ollama</p>
+      </article>
 
-				<h1>Sam's Accolades</h1>
+      <article class="card">
+        <span class="tag">REAL-TIME APPLICATIONS</span>
+        <h3>Stock Alert Platform</h3>
+        <p>
+          A market-monitoring application for watchlists, price alerts,
+          and short-term market-state analysis.
+        </p>
+        <ul>
+          <li>FastAPI services and SQLite data storage.</li>
+          <li>Premarket gap, threshold, and volume-related alerts.</li>
+          <li>Email and Home Assistant text-to-speech notifications.</li>
+        </ul>
+        <p class="tag">Python · FastAPI · SQLite · Market data</p>
+      </article>
+    </div>
+  </section>
 
-				<h3>Resume</h3>
-				<a href="http://73.202.21.113">Sam Server: Elevator Pitch</a><br>
-				<a href="Resume/Sammy_Portillo.pdf">Sam Portillo</a><br>
+  <section>
+    <h2>Selected public projects</h2>
 
-				<h3>Data Science</h3>
-				<a href="https://github.com/2020dataanalysis/OAuth2/blob/master/Stream.ipynb">TD Ameritrade Streaming Stock Data</a><br>
-				<a href='https://github.com/2020dataanalysis/charting/blob/master/Candlesticks.ipynb'>Live streaming 15
-					second Candlestick bar chart</a><br>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">DATA SCIENCE</span>
+        <h3>Streaming market data</h3>
+        <p>
+          Notebooks exploring brokerage data streams and live
+          candlestick visualization.
+        </p>
+        <ul>
+          <li>
+            <a href="https://github.com/2020dataanalysis/OAuth2/blob/master/Stream.ipynb">
+              TD Ameritrade streaming notebook
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/2020dataanalysis/charting/blob/master/Candlesticks.ipynb">
+              15-second candlestick notebook
+            </a>
+          </li>
+        </ul>
+      </article>
 
+      <article class="card">
+        <span class="tag">MACHINE LEARNING</span>
+        <h3>Image classification</h3>
+        <p>
+          Convolutional neural network projects for binary image
+          classification and digit recognition.
+        </p>
+        <ul>
+          <li>
+            <a href="https://github.com/SammyPortillo/Binary_Image_Classification">
+              Binary image classification
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/SammyPortillo/Digit_Image_Classification">
+              Digit image classification
+            </a>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </section>
 
-				<h3>Machine Learning</h3>
-				<h4>Convolutional Neural Network (CNN)</h4>
-				<a href="https://github.com/SammyPortillo/Binary_Image_Classification.git">Binary Image Classification</a><br>
-				<a href="https://github.com/SammyPortillo/Digit_Image_Classification.git">Digit Image Classification</a><br>
-				<br>
+  <section>
+    <h2>Tools I work with</h2>
+    <div class="skills">
+      <span>Python</span>
+      <span>FastAPI</span>
+      <span>SQLite</span>
+      <span>REST APIs</span>
+      <span>Local language models</span>
+      <span>Home Assistant</span>
+      <span>Git</span>
+    </div>
+  </section>
 
+  <section>
+    <h2>Software engineering foundations</h2>
+    <p>
+      Selected academic work covering requirements, design, and implementation.
+    </p>
+    <ul>
+      <li><a href="401/SRS.pdf">Software requirements specification</a></li>
+      <li><a href="401/SDS.pdf">Software design specification</a></li>
+      <li>
+        <a href="401/Software%20Prototype%20Contribution%20Summary.pdf">
+          Prototype contribution summary
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/401SE/OS">Software engineering repository</a>
+      </li>
+    </ul>
+  </section>
 
-				<H3>Linked In</h3>
-				<a href="https://www.linkedin.com/in/sammy-portillo-zyxe">linkedin</a><br>
+  <section>
+    <h2>Let's connect</h2>
+    <p>
+      Interested in practical AI applications, software engineering,
+      and data-focused systems.
+    </p>
+    <div class="actions">
+      <a class="button primary" href="https://www.linkedin.com/in/sammy-portillo-zyxe">
+        LinkedIn
+      </a>
+      <a class="button" href="https://github.com/SammyPortillo">GitHub profile</a>
+    </div>
+  </section>
+</main>
 
-				<h3>College Transcripts:</h3>
-				<a href="Transcripts/AcademicTranscript.html">Chabot College Transcript</a><br>
-				<a href="Transcripts/SSR_TSRPT.pdf">Hayward State Transcript</a><br>
-
-				<h3>401 Software Engineering</h3>
-				<h4>Software Specifications</h4>
-				<a href="401/SRS.pdf">Software Requirements Specifications</a><br>
-				<a href="401/SDS.pdf">Software Design Specifications</a><br>
-				<a href="401/Software Prototype Contribution Summary.pdf">Software Prototype Contribution Summary</a><br>
-
-				<h4>Repository</h4>
-				<a href="https://github.com/401SE/OS">401 Software Engineering Code</a>
-			</td>
-
+<footer>Sam Portillo · Updated October 2026</footer>
 </body>
-
 </html>
